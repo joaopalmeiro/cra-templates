@@ -1,0 +1,27 @@
+{
+  "name": "cra-template-quickstart",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "quickstart"
+  ],
+  "description": "A quickstart template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaopalmeiro/cra-templates",
+    "directory": "packages/cra-template-quickstart"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/cra-templates/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
