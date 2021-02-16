@@ -17,13 +17,11 @@ const yAccessor = (d) => d.frequency;
 
 const xScale = scaleBand({
   range: [0, xMax],
-  round: true,
   domain: data.map(xAccessor),
   padding: 0.4,
 });
 const yScale = scaleLinear({
   range: [yMax, 0],
-  round: true,
   domain: [0, Math.max(...data.map(yAccessor))],
 });
 
@@ -35,8 +33,6 @@ function BarChart() {
   return (
     <svg width={width} height={height}>
       <Group top={verticalMargin / 2}>
-        <AxisBottom scale={xScale} label="Letter (English)" top={yMax} numTicks={data.length} />
-
         {data.map((d, i) => {
           const barWidth = xScale.bandwidth();
           const barHeight = yMax - yPoint(d);
@@ -62,6 +58,7 @@ function BarChart() {
             </Group>
           );
         })}
+        <AxisBottom scale={xScale} label="Letter (English)" top={yMax} numTicks={data.length} />
       </Group>
     </svg>
   );
