@@ -5,7 +5,8 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
 ## Notes
 
 - `cra-template-[template-name]`.
-- `yarn add prettier --ignore-workspace-root-check --dev`
+- `yarn add prettier --ignore-workspace-root-check --dev`.
+- [`simple-react-boilerplate`](https://github.com/joaopalmeiro/simple-react-boilerplate).
 
 ## References
 
