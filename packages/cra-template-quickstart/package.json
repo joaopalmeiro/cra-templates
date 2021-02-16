@@ -7,7 +7,7 @@
     "template",
     "quickstart"
   ],
-  "description": "A quickstart template for Create React App.",
+  "description": "A quickstart/minimal template for Create React App.",
   "repository": {
     "type": "git",
     "url": "https://github.com/joaopalmeiro/cra-templates",
