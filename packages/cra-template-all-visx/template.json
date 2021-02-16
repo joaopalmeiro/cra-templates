@@ -1,0 +1,7 @@
+{
+  "package": {
+    "dependencies": {
+      "@visx/visx": "^1.5.0"
+    }
+  }
+}
