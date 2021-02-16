@@ -7,10 +7,10 @@ import { format } from 'd3-format';
 
 const width = 500;
 const height = 500;
-const margin = { top: 20, bottom: 20, left: 20, right: 20 };
+const verticalMargin = 120;
 
-const xMax = width - margin.left - margin.right;
-const yMax = height - margin.top - margin.bottom;
+const xMax = width;
+const yMax = height - verticalMargin;
 
 const xAccessor = (d) => d.letter;
 const yAccessor = (d) => d.frequency;
@@ -31,37 +31,38 @@ const compose = (scale, accessor) => (data) => scale(accessor(data));
 const xPoint = compose(xScale, xAccessor);
 const yPoint = compose(yScale, yAccessor);
 
-// Finally we'll embed it all in an SVG
 function BarChart() {
   return (
     <svg width={width} height={height}>
-      <AxisBottom scale={xScale} label="Letter (English)" top={yMax} numTicks={data.length} />
+      <Group top={verticalMargin / 2}>
+        <AxisBottom scale={xScale} label="Letter (English)" top={yMax} numTicks={data.length} />
 
-      {data.map((d, i) => {
-        const barWidth = xScale.bandwidth();
-        const barHeight = yMax - yPoint(d);
+        {data.map((d, i) => {
+          const barWidth = xScale.bandwidth();
+          const barHeight = yMax - yPoint(d);
 
-        const barX = xPoint(d);
-        const barY = yMax - barHeight;
+          const barX = xPoint(d);
+          const barY = yMax - barHeight;
 
-        return (
-          <Group key={`bar-${i}`}>
-            <Bar x={barX} y={barY} height={barHeight} width={barWidth} fill="#006a71" />
+          return (
+            <Group key={`bar-${i}`}>
+              <Bar x={barX} y={barY} height={barHeight} width={barWidth} fill="#006a71" />
 
-            <text
-              key={`text-label-${i}`}
-              x={barX}
-              y={barY}
-              dx={barWidth / 2}
-              dy="-.25em"
-              fontSize={8}
-              textAnchor="middle"
-            >
-              {format('.2~%')(yAccessor(d))}
-            </text>
-          </Group>
-        );
-      })}
+              <text
+                x={barX}
+                y={barY}
+                dx={barWidth / 2}
+                dy="-.25em"
+                fontSize={8}
+                textAnchor="middle"
+                fontFamily="Arial"
+              >
+                {format('.1~%')(yAccessor(d))}
+              </text>
+            </Group>
+          );
+        })}
+      </Group>
     </svg>
   );
 }
