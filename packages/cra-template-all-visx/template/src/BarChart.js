@@ -1,4 +1,4 @@
-import { AxisBottom } from '@visx/axis';
+import { AxisBottom, AxisLeft } from '@visx/axis';
 import { Group } from '@visx/group';
 import { letterFrequency as data } from '@visx/mock-data';
 import { scaleBand, scaleLinear } from '@visx/scale';
@@ -8,8 +8,9 @@ import { format } from 'd3-format';
 const width = 500;
 const height = 500;
 const verticalMargin = 120;
+const leftMargin = 30;
 
-const xMax = width;
+const xMax = width - leftMargin;
 const yMax = height - verticalMargin;
 
 const xAccessor = (d) => d.letter;
@@ -23,6 +24,7 @@ const xScale = scaleBand({
 const yScale = scaleLinear({
   range: [yMax, 0],
   domain: [0, Math.max(...data.map(yAccessor))],
+  nice: true,
 });
 
 const compose = (scale, accessor) => (data) => scale(accessor(data));
@@ -32,7 +34,7 @@ const yPoint = compose(yScale, yAccessor);
 function BarChart() {
   return (
     <svg width={width} height={height}>
-      <Group top={verticalMargin / 2}>
+      <Group left={leftMargin} top={verticalMargin / 2}>
         {data.map((d, i) => {
           const barWidth = xScale.bandwidth();
           const barHeight = yMax - yPoint(d);
@@ -41,24 +43,29 @@ function BarChart() {
           const barY = yMax - barHeight;
 
           return (
-            <Group key={`bar-${i}`}>
-              <Bar x={barX} y={barY} height={barHeight} width={barWidth} fill="#006a71" />
-
-              <text
-                x={barX}
-                y={barY}
-                dx={barWidth / 2}
-                dy="-.25em"
-                fontSize={8}
-                textAnchor="middle"
-                fontFamily="Arial"
-              >
-                {format('.1~%')(yAccessor(d))}
-              </text>
-            </Group>
+            <Bar
+              key={`bar-${i}`}
+              x={barX}
+              y={barY}
+              height={barHeight}
+              width={barWidth}
+              fill="#006a71"
+            />
           );
         })}
-        <AxisBottom scale={xScale} label="Letter (English)" top={yMax} numTicks={data.length} />
+
+        <AxisLeft scale={yScale} tickFormat={format('.1~%')} />
+        <text
+          y={xScale.bandwidth() + xScale.bandwidth() / 2}
+          transform="rotate(-90)"
+          fontSize={10}
+          fontFamily={'Arial'}
+          textAnchor={'end'}
+        >
+          Letter Frequency (English)
+        </text>
+
+        <AxisBottom scale={xScale} top={yMax} numTicks={data.length} />
       </Group>
     </svg>
   );
