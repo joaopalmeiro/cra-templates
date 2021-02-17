@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "publish": "lerna publish",
-    "ls": "lerna ls",
+    "ls": "lerna ls -l",
     "changed": "lerna changed"
   },
   "devDependencies": {

@@ -13,5 +13,6 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
 
 ## References
 
-- Ian Sutherland's "[CRA Minimal Templates](https://github.com/iansu/cra-minimal-templates)" repo.
+- Ian Sutherland's "[CRA Minimal Templates](https://github.com/iansu/cra-minimal-templates)" repo/packages.
 - [Custom Templates](https://create-react-app.dev/docs/custom-templates/).
+- José Silva's "[Lerna & Yarn Workspaces](https://mytechblog.io/lerna-yarn-workspaces)" blog post.
