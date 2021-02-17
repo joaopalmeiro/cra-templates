@@ -16,7 +16,9 @@
     "packages/*"
   ],
   "scripts": {
-    "lerna:publish": "lerna publish"
+    "publish": "lerna publish",
+    "ls": "lerna ls",
+    "changed": "lerna changed"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
