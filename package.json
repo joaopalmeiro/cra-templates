@@ -16,7 +16,7 @@
     "packages/*"
   ],
   "scripts": {
-    "publish": "lerna publish",
+    "lerna:publish": "lerna publish",
     "ls": "lerna ls -l",
     "changed": "lerna changed"
   },
