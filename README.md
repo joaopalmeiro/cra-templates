@@ -17,6 +17,7 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
   - `npx create-react-app my-app --template file:/Users/joao.palmeiro/Documents/GitHub/cra-templates/packages/cra-template-all-visx`.
 - [eslint-loader](https://www.npmjs.com/package/eslint-loader) (deprecated) and [eslint-webpack-plugin](https://www.npmjs.com/package/eslint-webpack-plugin) (ESLint plugin for webpack).
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) (to turn off all unnecessary or conflicting rules with Prettier). As of version 8.0.0, just add `"prettier"` (no need to add `"prettier/react"`).
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier). `"plugin:prettier/recommended"` includes `eslint-config-prettier`.
 - [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app) (ESLint configuration used by CRA).
 - Run ESLint (CRA): `./node_modules/.bin/eslint` (`./node_modules/.bin/eslint --print-config package.json`).
 - Integrate ESLint with Prettier: `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`.
