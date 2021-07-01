@@ -1,0 +1,32 @@
+{
+  "name": "cra-template-quickstart-eslint-prettier",
+  "version": "0.1.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "quickstart",
+    "eslint",
+    "prettier",
+    "linter",
+    "code-formatter"
+  ],
+  "description": "A quickstart/minimal template for Create React App with ESLint (linter) and Prettier (code formatter) ready to use.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaopalmeiro/cra-templates",
+    "directory": "packages/cra-template-quickstart-eslint-prettier"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/cra-templates/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
