@@ -8,6 +8,7 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
 
 - `npx create-react-app my-app --template all-visx`.
 - `npx create-react-app my-app --template quickstart`.
+- `npx create-react-app my-app --template quickstart-eslint-prettier`.
 
 ## Notes
 
@@ -30,7 +31,7 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
     - Config: set of applied rules.
     - A plugin can provide zero, one, or more configuration files.
   - [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint):
-    - [File exists, but `ENOENT: no such file or directory...` reported.] (open) issue.
+    - [File exists, but `ENOENT: no such file or directory...` reported.](https://github.com/microsoft/vscode-eslint/issues/1229) (open) issue.
   - [eslint-plugin-notice](https://github.com/nickdeis/eslint-plugin-notice) (for copyright headers).
   - [eslint-plugin-html](https://www.npmjs.com/package/eslint-plugin-html).
 - Prettier:
