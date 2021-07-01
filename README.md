@@ -15,12 +15,17 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
 - Test a template locally:
   - `npx create-react-app my-app --template file:/Users/joao.palmeiro/Documents/GitHub/cra-templates/packages/cra-template-quickstart`.
   - `npx create-react-app my-app --template file:/Users/joao.palmeiro/Documents/GitHub/cra-templates/packages/cra-template-all-visx`.
-- [eslint-loader](https://www.npmjs.com/package/eslint-loader) (deprecated) and [eslint-webpack-plugin](https://www.npmjs.com/package/eslint-webpack-plugin) (ESLint plugin for webpack).
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) (to turn off all unnecessary or conflicting rules with Prettier). As of version 8.0.0, just add `"prettier"` (no need to add `"prettier/react"`).
-- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier). `"plugin:prettier/recommended"` includes `eslint-config-prettier`.
-- [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app) (ESLint configuration used by CRA).
-- Run ESLint (CRA): `./node_modules/.bin/eslint` (`./node_modules/.bin/eslint --print-config package.json`).
-- Integrate ESLint with Prettier: `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`.
+- ESLint:
+  - [eslint-loader](https://www.npmjs.com/package/eslint-loader) (deprecated) and [eslint-webpack-plugin](https://www.npmjs.com/package/eslint-webpack-plugin) (ESLint plugin for webpack).
+  - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) (to turn off all unnecessary or conflicting rules with Prettier). As of version 8.0.0, just add `"prettier"` (no need to add `"prettier/react"`).
+  - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier). `"plugin:prettier/recommended"` includes `eslint-config-prettier`.
+  - [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app) (ESLint configuration used by CRA).
+  - Run ESLint (CRA): `./node_modules/.bin/eslint` (`./node_modules/.bin/eslint --print-config package.json`).
+  - Integrate ESLint with Prettier: `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`.
+  - Plugins (`"plugins"`) vs. Configs (`"extends"`):
+    - Plugin: set of rules that must be explicitly applied individually ([source](https://stackoverflow.com/a/54522973)). A plugin does not enforce any rule.
+    - Config: set of applied rules.
+    - A plugin can provide zero, one, or more configuration files.
 
 ## References
 
