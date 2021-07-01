@@ -26,6 +26,8 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
     - Plugin: set of rules that must be explicitly applied individually ([source](https://stackoverflow.com/a/54522973)). A plugin does not enforce any rule.
     - Config: set of applied rules.
     - A plugin can provide zero, one, or more configuration files.
+  - [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+- [VS Code Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
 ## References
 
@@ -33,3 +35,5 @@ A collection of templates for [Create React App](https://create-react-app.dev/).
 - [Custom Templates](https://create-react-app.dev/docs/custom-templates/).
 - José Silva's "[Lerna & Yarn Workspaces](https://mytechblog.io/lerna-yarn-workspaces)" blog post.
 - [Extending or replacing the default ESLint config](https://create-react-app.dev/docs/setting-up-your-editor#extending-or-replacing-the-default-eslint-config).
+- [VS Code language identifiers](https://code.visualstudio.com/docs/languages/identifiers).
+- Brady Dowling's [Setting up Create React App, VS Code, ESLint, and Prettier](https://readwriteexercise.com/posts/setting-up-create-react-app-vs-code-eslint-prettier/) blog post.
