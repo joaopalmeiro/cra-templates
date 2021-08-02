@@ -7,7 +7,19 @@
       "prettier": "^2.3.2"
     },
     "eslintConfig": {
-      "extends": ["react-app", "plugin:prettier/recommended"]
+      "extends": ["react-app", "plugin:prettier/recommended"],
+      "rules": {
+        "import/order": [
+          "warn",
+          {
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ]
+      }
     }
   }
 }
